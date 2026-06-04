@@ -4,7 +4,9 @@ Mutual Fund Data Engineering Capstone Project
 
 ## Project Overview
 
-This project is an end-to-end Mutual Fund Data Engineering and Analytics Capstone developed to simulate real-world financial data pipelines and analytics workflows.
+This project is an end-to-end Mutual Fund Data Engineering and Analytics capstone designed to simulate a real-world financial data pipeline and analytical workflow.
+
+It focuses on building a complete ETL pipeline + data warehouse + SQL analytics layer for mutual fund datasets.
 
 The project focuses on:
 
@@ -30,9 +32,6 @@ The project focuses on:
 
 ---
 
-## Project Structure
-
-```bash
 bluestock_mf_capstone/
 │
 ├── data/
@@ -57,12 +56,20 @@ bluestock_mf_capstone/
 │   ├── schema.sql
 │   └── queries.sql
 │
+├── charts/
+│   ├── nav_trends.png
+│   ├── aum_distribution.png
+│   ├── sip_growth.png
+│   ├── expense_ratio_analysis.png
+│   ├── returns_comparison.png
+│   └── transaction_analysis.png
+│
+├── reports/
+│   ├── eda_report.pdf
+│   └── insights_summary.md
+│
 ├── README.md
 └── requirements.txt
-```
-
----
-
 ## Key Features
 
 ### Data Cleaning
@@ -130,10 +137,10 @@ python scripts/clean_transactions.py
 python scripts/clean_performance.py
 ```
 
-### Load Data into SQLite
+### Load Data into PostgreSQL
 
 ```bash
-python scripts/load_sqlite.py
+python scripts/load_postgres.py
 ```
 
 ---
