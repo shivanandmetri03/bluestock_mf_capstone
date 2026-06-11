@@ -1,217 +1,281 @@
 # bluestock_mf_capstone
 
-## Mutual Fund Data Engineering Capstone Project
+## Mutual Fund Data Engineering, Analytics & Business Intelligence Capstone Project
+
+### Author
+
+Shivanand Metri
+
+### Internship
+
+Bluestock Fintech – Data Analyst Internship
 
 ---
 
 # Project Overview
 
-This project is an end-to-end Mutual Fund Data Engineering and Analytics Capstone designed to simulate a real-world financial data pipeline and analytical workflow.
+This project is an end-to-end Mutual Fund Data Engineering, Analytics, and Business Intelligence solution developed as part of the Bluestock Fintech Data Analyst Internship Program.
 
-It focuses on building a complete ETL pipeline, data warehouse, and SQL analytics layer for mutual fund datasets.
+The objective was to build a complete financial analytics platform covering data ingestion, ETL development, database design, SQL analytics, exploratory data analysis, fund performance evaluation, risk analytics, and interactive dashboard development.
 
-The project demonstrates portfolio-ready data engineering practices by integrating data ingestion, cleaning, warehousing, analytics, visualization, and reporting into a structured workflow.
+The project simulates a real-world financial data engineering workflow and demonstrates portfolio-ready skills in Python, SQL, PostgreSQL, Power BI, and financial analytics.
 
 ---
 
 # Project Objectives
 
-* Data ingestion
-* Data cleaning and validation
-* ETL pipeline development
-* SQLite data warehousing
-* SQL analytics
-* Mutual fund performance analysis
-* Portfolio-ready data engineering practices
-* Financial data transformation and reporting
+* Data Ingestion & API Integration
+* Data Cleaning & Validation
+* ETL Pipeline Development
+* PostgreSQL Data Warehouse Design
+* SQL Analytics
+* Exploratory Data Analysis (EDA)
+* Fund Performance Analytics
+* Risk Analytics
+* Power BI Dashboard Development
+* Business Intelligence Reporting
 
 ---
 
-# Tech Stack
+# Technology Stack
+
+### Programming & Analytics
 
 * Python
 * Pandas
+* NumPy
+* SciPy
+
+### Database
+
+* PostgreSQL
 * SQLAlchemy
-* SQLite
 * SQL
-* Git & GitHub
-* Power BI *(Upcoming)*
+
+### Visualization
+
+* Matplotlib
+* Seaborn
+* Plotly
+* Power BI
+
+### Development Tools
+
+* Jupyter Notebook
+* VS Code
+* Git
+* GitHub
+
+### API Integration
+
+* MFAPI
+
+---
+
+# Project Architecture
+
+Raw Datasets + MFAPI Live Data
+↓
+Python ETL Pipeline
+↓
+Data Cleaning & Validation
+↓
+PostgreSQL Database
+↓
+SQL Analytics Layer
+↓
+Performance Analytics
+↓
+Power BI Dashboard
+↓
+Business Insights & Reporting
 
 ---
 
 # Project Structure
 
-```bash id="u1x7kp"
 bluestock_mf_capstone/
-│
+
 ├── data/
-│   ├── raw/
-│   └── processed/
+│ ├── raw/
+│ ├── processed/
 │
 ├── database/
-│   └── bluestock_mf.db
+│ └── bluestock_mf.db
 │
 ├── docs/
-│   └── data_dictionary.md
+│ └── data_dictionary.md
 │
 ├── notebooks/
+│ ├── Data_Ingestion.ipynb
+│ ├── Data_Cleaning.ipynb
+│ ├── EDA_Analysis.ipynb
+│ ├── Performance_Analytics.ipynb
+│ └── Advanced_Analytics.ipynb
 │
 ├── scripts/
-│   ├── clean_nav_history.py
-│   ├── clean_transactions.py
-│   ├── clean_performance.py
-│   └── load_sqlite.py
+│ ├── live_nav_fetch.py
+│ ├── clean_nav_history.py
+│ ├── clean_transactions.py
+│ ├── clean_performance.py
+│ ├── load_database.py
+│ ├── recommender.py
+│ └── run_pipeline.py
 │
 ├── sql/
-│   ├── schema.sql
-│   └── queries.sql
+│ ├── schema.sql
+│ └── queries.sql
 │
-├── charts/
-│   ├── nav_trends.png
-│   ├── aum_distribution.png
-│   ├── sip_growth.png
-│   ├── expense_ratio_analysis.png
-│   ├── returns_comparison.png
-│   └── transaction_analysis.png
+├── dashboard/
+│ ├── bluestock_mf_dashboard.pbix
+│ ├── Dashboard.pdf
+│ └── screenshots/
 │
 ├── reports/
-│   ├── eda_report.pdf
-│   └── insights_summary.md
+│ ├── Final_Report.pdf
+│ └── Bluestock_MF_Presentation.pptx
 │
 ├── README.md
 └── requirements.txt
-```
 
 ---
 
-# Key Features
+# Database Design
 
-## Data Ingestion
-
-* Imported mutual fund datasets from raw sources
-* Organized raw and processed datasets separately
-* Built reusable ETL workflow for data processing
-
----
-
-## Data Cleaning & Validation
-
-* Standardized date formats
-* Removed duplicate records
-* Validated NAV values
-* Standardized transaction types
-* Checked expense ratio ranges
-* Handled missing and null values
-* Cleaned inconsistent financial records
-* Improved dataset quality and reliability
-
----
-
-## ETL Pipeline Development
-
-* Automated cleaning workflows using Python scripts
-* Built modular ETL scripts for scalability
-* Processed datasets before warehouse loading
-* Prepared analytics-ready datasets
-
-Scripts included:
-
-* `clean_nav_history.py`
-* `clean_transactions.py`
-* `clean_performance.py`
-* `load_sqlite.py`
-
----
-
-# Data Warehouse Design
-
-Implemented SQLite Star Schema architecture for analytical querying.
+The project implements a Star Schema Data Warehouse.
 
 ## Dimension Tables
 
-* `dim_fund`
-* `dim_date`
+* dim_fund
+* dim_date
 
 ## Fact Tables
 
-* `fact_nav`
-* `fact_transactions`
-* `fact_performance`
-* `fact_aum`
+* fact_nav
+* fact_transactions
+* fact_performance
+* fact_aum
+
+The design supports efficient analytical querying, reporting, and dashboarding.
 
 ---
 
-# SQL Analytics
+# Data Engineering Workflow
 
-Created analytical SQL queries for:
+## Day 1 – Data Ingestion
 
-* Top funds by AUM
-* Monthly NAV analysis
-* SIP growth trends
-* State-wise transaction analysis
-* Expense ratio analysis
-* Returns comparison
-* Fund performance tracking
-* Investor transaction insights
+* Loaded mutual fund datasets
+* Fetched live NAV data using MFAPI
+* Organized raw and processed datasets
 
----
+## Day 2 – Data Cleaning & Database Design
 
-# Exploratory Data Analysis (EDA)
-
-Performed detailed EDA to identify trends and insights from mutual fund datasets.
-
-Analysis included:
-
-* NAV trend analysis
-* SIP growth analysis
-* AUM distribution analysis
-* Expense ratio comparison
-* Returns comparison across schemes
-* Transaction behavior analysis
+* Cleaned NAV history
+* Standardized transaction records
+* Validated performance metrics
+* Created PostgreSQL schema
+* Loaded datasets into database
 
 ---
 
-# Data Visualization
+# Exploratory Data Analysis
 
-Generated analytical visualizations using Python libraries.
+Key analyses performed:
 
-Charts included:
+* NAV Trend Analysis
+* AUM Growth Analysis
+* SIP Inflow Analysis
+* Category Inflow Analysis
+* Investor Demographics Analysis
+* Geographic Distribution Analysis
+* Correlation Analysis
+* Sector Allocation Analysis
 
-* NAV Trends
-* AUM Distribution
-* SIP Growth Analysis
-* Expense Ratio Analysis
-* Returns Comparison
-* Transaction Analysis
-
-Visualization tools:
-
-* Matplotlib
-* Plotly
+Generated 15+ analytical charts and business insights.
 
 ---
 
-# Database
+# Performance Analytics
 
-SQLite database file:
+Calculated:
 
-```bash id="m8r2dw"
-database/bluestock_mf.db
-```
+* Daily Returns
+* CAGR
+* Sharpe Ratio
+* Sortino Ratio
+* Alpha
+* Beta
+* Maximum Drawdown
+* Fund Scorecard Ranking
+
+These metrics were used to evaluate risk-adjusted performance across mutual fund schemes.
 
 ---
 
-# Reports & Documentation
+# Advanced Analytics
 
-Project deliverables include:
+Implemented:
 
-* EDA report in PDF format
-* Insights summary documentation
-* Data dictionary
-* SQL schema documentation
-* Analytical SQL queries
-* ETL scripts
-* GitHub repository documentation
+* Historical VaR (95%)
+* Conditional VaR (CVaR)
+* Rolling Sharpe Ratio
+* Investor Cohort Analysis
+* SIP Continuity Analysis
+* Fund Recommendation Engine
+* Sector Concentration Analysis (HHI)
+
+---
+
+# Power BI Dashboard
+
+The dashboard consists of four analytical pages:
+
+### Page 1 – Industry Overview
+
+* Total AUM
+* SIP Inflows
+* Folios
+* Industry Growth Trends
+
+### Page 2 – Fund Performance
+
+* Risk vs Return Analysis
+* Fund Scorecard
+* Benchmark Comparison
+
+### Page 3 – Investor Analytics
+
+* State-wise Transactions
+* Demographic Analysis
+* Transaction Type Distribution
+
+### Page 4 – SIP & Market Trends
+
+* SIP Growth
+* Category Inflows
+* Market Trends
+
+Features:
+
+* Interactive Filters
+* Drill-through Navigation
+* Dynamic KPIs
+* Tooltips
+
+---
+
+# Key Deliverables
+
+* ETL Pipeline
+* PostgreSQL Database
+* SQL Analytics
+* EDA Notebook
+* Performance Analytics Notebook
+* Advanced Analytics Notebook
+* Power BI Dashboard
+* Final Report
+* Presentation Deck
+* GitHub Repository
 
 ---
 
@@ -219,62 +283,37 @@ Project deliverables include:
 
 ## Clone Repository
 
-```bash id="d5v7nc"
 git clone https://github.com/shivanandmetri03/bluestock_mf_capstone.git
-```
 
 ## Install Dependencies
 
-```bash id="h3q9tm"
 pip install -r requirements.txt
-```
 
-## Run Cleaning Scripts
+## Run ETL Pipeline
 
-```bash id="w6j1pe"
-python scripts/clean_nav_history.py
-python scripts/clean_transactions.py
-python scripts/clean_performance.py
-```
-
-## Load Data into SQLite
-
-```bash id="r4n8kx"
-python scripts/load_sqlite.py
-```
-
----
-
-# Deliverables
-
-* Cleaned datasets
-* Processed datasets
-* SQLite database
-* SQL schema
-* Analytical SQL queries
-* Data dictionary
-* ETL scripts
-* Charts and visualizations
-* EDA report
-* GitHub repository
+python run_pipeline.py
 
 ---
 
 # Future Enhancements
 
-* Power BI Dashboard
+* Real-time NAV Monitoring
 * Streamlit Web Application
-* Automated ETL Scheduling
 * Cloud Deployment
-* API Integration
-* Advanced Financial KPIs
-* Real-time data ingestion
-* Interactive dashboards
+* Automated ETL Scheduling
+* Portfolio Optimization Engine
+* Monte Carlo Simulation
+* AI-powered Fund Recommendation System
 
 ---
 
 # Author
 
-## Shivanand Metri
+Shivanand Metri
 
-GitHub: https://github.com/shivanandmetri03
+PGDM – Finance & Business Analytics
+
+M.S. Ramaiah Institute of Management
+
+GitHub:
+https://github.com/shivanandmetri03
