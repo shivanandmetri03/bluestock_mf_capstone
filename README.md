@@ -92,53 +92,53 @@ Business Insights & Reporting
 
 ---
 
-# Project Structure
+## Project Structure
 
+```text
 bluestock_mf_capstone/
-
+│
 ├── data/
-│ ├── raw/
-│ ├── processed/
+│   ├── raw/
+│   └── processed/
 │
 ├── database/
-│ └── bluestock_mf.db
+│   └── bluestock_mf.db
 │
 ├── docs/
-│ └── data_dictionary.md
+│   └── data_dictionary.md
 │
 ├── notebooks/
-│ ├── Data_Ingestion.ipynb
-│ ├── Data_Cleaning.ipynb
-│ ├── EDA_Analysis.ipynb
-│ ├── Performance_Analytics.ipynb
-│ └── Advanced_Analytics.ipynb
+│   ├── Data_Ingestion.ipynb
+│   ├── Data_Cleaning.ipynb
+│   ├── EDA_Analysis.ipynb
+│   ├── Performance_Analytics.ipynb
+│   └── Advanced_Analytics.ipynb
 │
 ├── scripts/
-│ ├── live_nav_fetch.py
-│ ├── clean_nav_history.py
-│ ├── clean_transactions.py
-│ ├── clean_performance.py
-│ ├── load_database.py
-│ ├── recommender.py
-│ └── run_pipeline.py
+│   ├── live_nav_fetch.py
+│   ├── clean_nav_history.py
+│   ├── clean_transactions.py
+│   ├── clean_performance.py
+│   ├── load_database.py
+│   ├── recommender.py
+│   └── run_pipeline.py
 │
 ├── sql/
-│ ├── schema.sql
-│ └── queries.sql
+│   ├── schema.sql
+│   └── queries.sql
 │
 ├── dashboard/
-│ ├── bluestock_mf_dashboard.pbix
-│ ├── Dashboard.pdf
-│ └── screenshots/
+│   ├── bluestock_mf_dashboard.pbix
+│   ├── Dashboard.pdf
+│   └── screenshots/
 │
 ├── reports/
-│ ├── Final_Report.pdf
-│ └── Bluestock_MF_Presentation.pptx
+│   ├── Final_Report.pdf
+│   └── Bluestock_MF_Presentation.pptx
 │
 ├── README.md
 └── requirements.txt
-
----
+```
 
 # Database Design
 
